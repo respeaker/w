@@ -2,9 +2,25 @@
 
 Send Wi-Fi settings through sound wave.
 
-The application is based on [libquiet](https://github.com/quiet) which is a library to transmit data with sound. 
+The application is based on [libquiet](https://github.com/quiet) which is a library to transmit data with sound.
 
-## To Do
+## for ReSpeaker V2 or Raspberry Pi
+1. Install quiet python library
+
+   `sudo pip install ./quiet-*.whl`
+
+2. Run a receiver
+
+   `python listener.py`
+
+
+3. Go to [respeaker.io/w](http://respeaker.io/w) to transmit any data
+
+
+![](send.png)
+
+
+## for PC
 1. Install [quiet](https://github.com/quiet/quiet).
 Second
 
@@ -20,6 +36,5 @@ Second
 4. Go to [respeaker.io/w](http://respeaker.io/w) to transmit any data
 
 
-![](send.png)
 
 
