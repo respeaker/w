@@ -16,6 +16,8 @@ The application is based on [libquiet](https://github.com/quiet) which is a libr
 
 3. Go to [respeaker.io/w](http://respeaker.io/w) to transmit any data
 
+![](qr.png)
+
 
 ![](send.png)
 
@@ -34,7 +36,3 @@ Second
         quiet_decode_soundcard ultrasonic-experimental
 
 4. Go to [respeaker.io/w](http://respeaker.io/w) to transmit any data
-
-
-
-
