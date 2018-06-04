@@ -145,11 +145,13 @@ def main():
 
     def on_data(data):
         ssid_length = data[0]
-        ssid = data[1:ssid_length+1].tostring()
-        password = data[ssid_length+1:].tostring()
+        ssid = data[1:ssid_length+1].tostring().decode('utf-8')
+        password = data[ssid_length+1:].tostring().decode('utf-8')
+        print('SSID: {}\nPassword: {}'.format(ssid, password))
 
-        if os.system('which nmcli') == 0:
-            if os.system('sudo nmcli device wifi connect {} {}'.format(ssid, password)) == 0:
+        if os.system('which nmcli >/dev/null') == 0:
+            cmd = 'sudo nmcli device wifi connect {} password {}'.format(ssid, password)
+            if os.system(cmd) == 0:
                 print('Wi-Fi is connected')
                 listener.stop()
                 pixel_ring.off()
